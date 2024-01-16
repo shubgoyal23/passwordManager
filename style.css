@@ -1,0 +1,354 @@
+body {
+  background-color: rgb(230, 224, 224);
+}
+
+.container {
+  width: 95vw;
+  min-height: 95vh;
+  border: 1px solid gray;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+.container h1 {
+  margin: 1rem auto;
+  text-decoration: underline;
+  color: darkslateblue;
+}
+
+.password-table{
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+.password-table::-webkit-scrollbar{
+    display: none;
+}
+.password-table table{
+    border-collapse: collapse;
+    margin: 1rem auto;
+    background-color: #faf3f3;
+}
+.password-table table .head {
+    background: rgb(140, 149, 229);
+    
+}
+.password-table td{
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.password-table td img{
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    
+}
+.password-table td button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    
+}
+.copied{
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #eee;
+    z-index: 99;
+}
+.container p {
+    margin: 0;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.input form input{
+    display: block;
+    margin: 0.5rem auto;
+    width: 50%;
+    box-sizing: border-box;
+    height: 2rem;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: solid 1px darkblue;
+    cursor: pointer;
+    max-width: 400px;
+    box-sizing: border-box;
+    height: 40px;
+}
+#btn-form{
+    text-transform: uppercase;
+    background-color: blueviolet;
+    padding: 0;
+    color: white;
+    max-width: 400px;
+}
+#btn-form:hover{
+    background-color: brown;
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.generate-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 5px;
+    border: solid 1px darkblue;
+    box-sizing: border-box;
+    height: 40px;
+}
+.generate-password input{
+    width: 90%;
+    box-sizing: border-box;
+    height: 2rem;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+   
+}
+.generate-password button{
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+input{
+    outline: none;
+}
+.password-maker{
+    height: 500px;
+    width: 380px;
+    position: fixed;
+    top: 5vh;
+    left: 50vw;
+    border: solid 1px rgb(177, 177, 177);
+    background-color: #f0f0f0;
+    transform: translate(-190px, 20px);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    margin: auto;
+    overflow-y: scroll;
+}
+.password-maker h2{
+    color: darkgoldenrod;
+
+}
+.strong-password-generated{
+    min-height: 60px;
+    width: 95%;
+    margin: auto;
+    border: solid 1px #b1afaf;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.strong-password-generated img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+}
+.strong-password-generated div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+.password-letter{
+    color: rgb(0, 0, 0) !important;
+    font-size: 1.2rem;
+}
+.password-letter-capital{
+    color: rgb(94, 89, 89) !important;
+    font-size: 1.2rem;
+}
+.password-number{
+    color: blue !important;
+    font-size: 1.2rem;
+
+}
+.password-special{
+    color: red !important;
+    font-size: 1.2rem;
+
+}
+.password-output{
+    gap: 1px !important;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 25px;
+}
+.password-maker #close{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 3px;
+    cursor: pointer;
+    color: red;
+    font-weight: 700;
+
+}
+.password-maker .div-options{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    width: 95%;
+    box-sizing: border-box;
+    margin: 0.2rem auto;
+    height: 40px;
+    align-items: center;
+}
+.password-maker .div-options-inner{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 5px ;
+}
+.main-pass-div{
+    margin: 1rem auto;
+}
+input{
+    cursor: pointer;
+}
+.div-options input[type=number]{
+    width: 30px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.pass-codied-sucess{
+    height: 60px;
+    width: 360px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(22, 22, 22, 0.61);
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pass-codied-sucess p{
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.password-history{
+    height: 500px;
+    width: 380px;
+    position: fixed;
+    top: 5vh;
+    left: 50vw;
+    border: solid 1px rgb(177, 177, 177);
+    background-color: #f0f0f0;
+    transform: translate(-190px, 20px);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    margin: auto;
+    overflow-y: scroll;
+}
+.strong-password-history{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    width: 95%;
+    box-sizing: border-box;
+    margin: 0.2rem auto;
+    height: 40px;
+    align-items: center;
+}
+.strong-password-history img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding-left: 15px;
+}
+.strong-password-history .password-history-feild{
+    display: flex;
+    overflow-x: scroll;
+}
+.strong-password-history .password-history-feild::-webkit-scrollbar {
+    display: none;
+}
+
+#pass-history-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: red;
+    font-weight: 700;
+
+}
+#pass-history-btn{
+    border: #eee solid 2px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    color: red;
+    font-weight: 700;
+
+}
+#clear-password-history{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: red;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 420px) {
+    .input form input{
+        width: 90%;
+    }
+    .generate-password{       
+        width: 90%;
+    }
+    .password-maker, .password-history{
+        height: 80vh;
+        width: 90vw;
+        top: 5vh;
+        left: 5vw;
+        transform: translate(0, 0);
+    }
+}

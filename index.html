@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password manager</title>
+    <link rel="stylesheet" href="/passwordManager/style.css">
+    <script src="/passwordManager/app.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <p>Store all you Password here safley</p>
+
+
+        <div class="password-table">
+            <table id="table">
+                <tr class="head">
+                    <td>Website</td>
+                    <td>UserName</td>
+                    <td>Password</td>
+                    <td><img src="/images/delete.png" alt="delete"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="input">
+            <form action="" id="add-password">
+                <input type="text" id="website" placeholder="Website Name">
+                <input type="text" id="username" placeholder="User Name">
+                <input type="password" id="password" placeholder="Password" >
+
+                <input type="submit" value="save" id="btn-form">
+            </form>
+        </div>
+        <div class="copied hidden">
+            <p>Copied To ClipBoard</p>
+        </div>
+        <div class="generate-password">
+            <button>Generate Password<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+                    viewBox="0 0 50 50">
+                    <path
+                        d="M 25 2 A 2.0002 2.0002 0 1 0 25 6 C 35.517124 6 44 14.482876 44 25 C 44 35.517124 35.517124 44 25 44 C 14.482876 44 6 35.517124 6 25 C 6 19.524201 8.3080175 14.608106 12 11.144531 L 12 15 A 2.0002 2.0002 0 1 0 16 15 L 16 4 L 5 4 A 2.0002 2.0002 0 1 0 5 8 L 9.5253906 8 C 4.9067015 12.20948 2 18.272325 2 25 C 2 37.678876 12.321124 48 25 48 C 37.678876 48 48 37.678876 48 25 C 48 12.321124 37.678876 2 25 2 z">
+                    </path>
+                </svg></button>
+        </div>
+        <div class="password-maker hidden">
+            <button id="close">X</button>
+            <h2>Generate Strong Password</h2>
+            <div class="strong-password-generated main-pass-div">
+                <div class="password-output">
+                    <span class="password-letter">a</span>
+                    <span class="password-number">2</span>
+                    <span class="password-special">$</span>
+                </div>
+                <div><img src="copy.svg" alt="copy" id="pass-copy">
+                    <img src="re.svg" alt="copy" id="pass-new">
+                    <img src="insert.svg" alt="copy" id="pass-insert">
+                </div>
+            </div>
+
+            <div class="main-pass-div">
+                <div class="div-options">
+                    <label for="Password-length">Length: 16</label>
+                    <input type="range" min="8" max="128" id="Password-length" value="16" step="1" control>
+                </div>
+                <div class="div-options">
+                    <label for="small-alpha-check">a-z</label>
+                    <input type="checkbox" id="small-alpha-check" checked>
+                </div>
+                <div class="div-options">
+                    <label for="capital-alpha-check">A-Z</label>
+                    <input type="checkbox" id="capital-alpha-check" checked>
+                </div>
+                <div class="div-options">
+                    <label for="number-check">0-9</label>
+                    <input type="checkbox" id="number-check" checked>
+                </div>
+                <div class="div-options">
+                    <label for="special-check">!@#$%^&*</label>
+                    <input type="checkbox" id="special-check" checked>
+                </div>
+            </div>
+
+            <div class="main-pass-div">
+                <div class="div-options">
+                    <label for="min-number">Minimum Number</label>
+                    <input type="number" id="min-number" value="1" min="1" max="5">
+                </div>
+                <div class="div-options">
+                    <label for="min-special">Minimum Special</label>
+                    <input type="number" id="min-special" value="1" min="1" max="5">
+                </div>
+            </div>
+            <div>
+                <button id="pass-history-btn">Show Password History</button>
+            </div>
+            <div class="pass-codied-sucess hidden">
+                <p>Password Copied</p>
+            </div>
+        </div>
+        <div class="password-history hidden">
+            <button id="pass-history-close">X</button>
+            <h2>Password History</h2>
+            <div class="password-history-list-div">
+                
+            </div>
+            <button id="clear-password-history">Clear History</button>
+        </div>
+    </div>
+</body>
+
+</html>
